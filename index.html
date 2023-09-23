@@ -11,7 +11,7 @@
 </head>
 
 <body class="box-border p-0">
-    <nav class="w-screen h-24 px-3.5 bg-emerald-400 flex " id="navBar" aria-label="main navigation">
+    <nav class="w-screen h-24 fixed px-3.5 bg-emerald-400 flex " id="navBar" aria-label="main navigation">
         <div class="w-2/4 h-full flex px-2.5 items-center">
             <a class="navbarTitle text-6xl text-slate-50" id="navbarTitle"><i
                     class="fa-solid fa-wallet text-5xl px-2 text-slate-50"></i>
@@ -35,13 +35,14 @@
             </div>
         </div>
     </nav>
-    <main class="bg-slate-100 h-screen flex justify-center items-center">
+    <main class="bg-slate-100 flex justify-center items-center">
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BALANCE SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-        <section class=" flex  justify-center items-center ">
-            <div class=" w-3/5 grid grid-cols-2  border-solid border-4 border-emerald-400" id="mainBox">
-                <div class="border-solid border-4 border-orange-200 flex flex-col items-center"><!--this div is for create a box than contain balanceBox & filterBox  -->
+        <section class="w-2/4 h-screen mt-52">
+            <div class="grid grid-cols-12 gap-x-3.5 flex justify-around justify-items-stretch " id="mainBox">
+                <!-- ------------------------ BALANCE & FILTER BOX ---------- -->
+                <div class="col-span-4 "><!--this div is for create a box than contain balanceBox & filterBox  -->
                     <!-- ---------------------- BALANCE BOX ---------------- -->
-                    <div class="border-solid border-2 border-gray-100 rounded-md bg-white w-80" id="balanceBox">
+                    <div class="border-solid border-2 border-gray-100 rounded-md bg-white " id="balanceBox">
                         <h2 class="text-2xl px-3.5 py-2.5">Balance</h2>
                         <div class="grid grid-cols-2 px-3.5 py-2.5 " id="balanceBoxBoard">
                             <div class="my-0.5">
@@ -65,7 +66,7 @@
                         </div>
                     </div>
                     <!-- ---------------------- FILTER BOX ---------------- -->
-                    <div class="border-solid border-2 border-gray-100 rounded-md bg-white w-80" id="filterBox">
+                    <div class="border-solid border-2 border-gray-100 rounded-md bg-white " id="filterBox">
                         <div class="flex items-center justify-between" id="filterBoxTitle">
                             <div class="px-3.5 py-2.5">
                                 <h3 class="text-2xl" >Filtros</h3>
@@ -102,20 +103,20 @@
                     </div>
                 </div>
                 <!-- ---------------------- OPERATIONS BOX ---------------- -->
-                <div class="" id="operationsBox">
-                    <div class="operationsBoxTitle">
-                        <h3>Operaciones</h3>
-                        <button>+ Nueva Operación</button>
+                <div class="border-solid border-2 border-gray-100 rounded-md bg-white col-span-8 px-3.5 py-2.5" id="operationsBox">
+                    <div class="flex justify-between px-3.5 py-2.5" id="operationsBoxTitle">
+                        <h3 class="text-2xl">Operaciones</h3>
+                        <button class="btn bg-emerald-400 border-solid border-2 border-emerald-400 rounded-md text-slate-50 px-1.5 py-1.5 " id="newOperationbtn">+ Nueva Operación</button>
                     </div>
-                    <div class="operationsBoxDisplay">
-                        <div class="" id="operationsBoxNone">
-                            <figure>
-                                <img src="img/wallet.svg" alt="wallet">
+                    <div class="flex flex-col px-3.5 py-2.5" id="operationsBoxDisplay">
+                        <div class="flex flex-col justify-center items-center" id="operationsBoxNone">
+                            <figure class="w-7/12 " >
+                                <img class="" src="img/wallet.svg" alt="wallet">
                             </figure>
-                            <h4>Sin Resultados</h4>
-                            <p>Cambia los filtros o agrega operaciones</p>
+                            <h4 class="text-2xl py-2.5">Sin Resultados</h4>
+                            <p class="py-2.5">Cambia los filtros o agrega operaciones</p>
                         </div>
-                        <div class="" id="operationsBoxShow">
+                        <div class="hidden" id="operationsBoxShow">
                             <div id="operationsBoxBoardHeaders">
                                 <div>
                                     <p>Descipción</p>
