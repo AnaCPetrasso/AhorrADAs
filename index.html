@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/8f1dad4900.js" crossorigin="anonymous"></script>
     <title>AhorrADAs</title>
-    <title>AhorrADAs</title>
 </head>
 
 <body class="box-border p-0">
@@ -36,62 +35,60 @@
             </div>
         </div>
     </nav>
-    <main>
+    <main class="bg-slate-100 h-screen flex justify-center items-center">
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BALANCE SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-        <section>
-            <div class="mainBox" id="mainBox">
-                <div>
-                    <!--this div is for create a box than contain banceBox & filterBox  -->
+        <section class=" flex  justify-center items-center ">
+            <div class=" w-3/5 grid grid-cols-2  border-solid border-4 border-emerald-400" id="mainBox">
+                <div class="border-solid border-4 border-orange-200 flex flex-col items-center"><!--this div is for create a box than contain balanceBox & filterBox  -->
                     <!-- ---------------------- BALANCE BOX ---------------- -->
-                    <div class="balanceBox" id="balanceBox">
-                        <h2>Balance</h2>
-                        <div class="balanceBoxBoard" id="balanceBoxBoard">
-                            <div>
-                                <p>Ganancias</p>
+                    <div class="border-solid border-2 border-gray-100 rounded-md bg-white w-80" id="balanceBox">
+                        <h2 class="text-2xl px-3.5 py-2.5">Balance</h2>
+                        <div class="grid grid-cols-2 px-3.5 py-2.5 " id="balanceBoxBoard">
+                            <div class="my-0.5">
+                                <p class="text-lg">Ganancias</p>
                             </div>
-                            <div>
-                                +0
+                            <div class="flex justify-end">
+                                <p class="text-green-600 font-semibold ">+0</p>
                             </div>
-                            <div>
-                                <p>Gastos</p>
+                            <div class="my-0.5">
+                                <p class="text-lg">Gastos</p>
                             </div>
-                            <div>
-                                -0
+                            <div class="flex justify-end">
+                                <p class="text-red-600 font-semibold ">-0</p>
                             </div>
-                            <div>
-                                <p>Total</p>
+                            <div class="my-0.5">
+                                <p class="text-xl">Total</p>
                             </div>
-                            <div>
-                                $0
+                            <div class="flex justify-end">
+                                <p class=" font-semibold ">$0</p>
                             </div>
                         </div>
                     </div>
                     <!-- ---------------------- FILTER BOX ---------------- -->
-                    <div class="filterBox">
-                        <div class="filterBoxTitle">
-                            <div>
-                                <h3>Filtros</h3>
+                    <div class="border-solid border-2 border-gray-100 rounded-md bg-white w-80" id="filterBox">
+                        <div class="flex items-center justify-between" id="filterBoxTitle">
+                            <div class="px-3.5 py-2.5">
+                                <h3 class="text-2xl" >Filtros</h3>
                             </div>
-                            <div>
-                                <a href="#" id="toggleFilters">Ocultar filtros</a>
+                            <div class="px-3.5 py-2.5">
+                                <a href="#" id="toggleFilters"></a>
                             </div>
                         </div>
                         <div class="filterBoxFilters" id="filters">
-
                             <form action="#">
-                                <fieldset>
-                                    <label for="typeForm">Tipo</label>
-                                    <select name="type" id="typeForm">
+                                <fieldset class="grid grid-cols-1 px-3.5 py-2.5">
+                                    <label for="typeForm" class="text-lg py-0.5">Tipo</label>
+                                    <select name="type" id="typeForm" class="py-2.5 px-2.5 bg-white rounded-md border-2 border-gray-200 border-solid" >
                                         <option value="test">test</option>
                                     </select>
-                                    <label for="categoryForm">Categoria</label>
-                                    <select name="category" id="categoryForm">
+                                    <label for="categoryForm" class="text-lg py-0.5">Categoria</label>
+                                    <select name="category" id="categoryForm" class="py-2.5 px-2.5 bg-white rounded-md border-2 border-gray-200 border-solid">
                                         <option value="test">test</option>
                                     </select>
-                                    <label for="dateForm">Desde</label>
-                                    <input type="date">
-                                    <label for="sortByForm">Desde</label>
-                                    <select name="sortBy" id="sortByForm">
+                                    <label for="dateForm" class="text-lg py-0.5">Desde</label>
+                                    <input type="date" name="dateForm" class="py-2.5 px-2.5 bg-white rounded-md border-2 border-gray-200 border-solid">
+                                    <label for="sortByForm" class="text-lg py-0.5">Ordernar por</label>
+                                    <select name="sortBy" id="sortByForm" class="py-2.5 px-2.5 bg-white rounded-md border-2 border-gray-200 border-solid">
                                         <option value="test">Mas Reciente</option>
                                         <option value="test">Menos Reciente</option>
                                         <option value="test">Mayor Monto</option>
@@ -99,13 +96,13 @@
                                         <option value="test">A/Z</option>
                                         <option value="test">Z/A</option>
                                     </select>
-                                </fieldset>    
+                                </fieldset>
                             </form>
                         </div>
                     </div>
                 </div>
                 <!-- ---------------------- OPERATIONS BOX ---------------- -->
-                <div class="operationsBox" id="operationsBox">
+                <div class="" id="operationsBox">
                     <div class="operationsBoxTitle">
                         <h3>Operaciones</h3>
                         <button>+ Nueva Operación</button>
