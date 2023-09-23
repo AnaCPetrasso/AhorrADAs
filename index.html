@@ -109,29 +109,29 @@
                         <button class="btn bg-emerald-400 border-solid border-2 border-emerald-400 rounded-md text-slate-50 px-1.5 py-1.5 " id="newOperationbtn">+ Nueva Operación</button>
                     </div>
                     <div class="flex flex-col px-3.5 py-2.5" id="operationsBoxDisplay">
-                        <div class="flex flex-col justify-center items-center" id="operationsBoxNone">
+                        <div class="flex flex-col justify-center items-center hidden" id="operationsBoxNone">
                             <figure class="w-7/12 " >
                                 <img class="" src="img/wallet.svg" alt="wallet">
                             </figure>
                             <h4 class="text-2xl py-2.5">Sin Resultados</h4>
                             <p class="py-2.5">Cambia los filtros o agrega operaciones</p>
                         </div>
-                        <div class="hidden" id="operationsBoxShow">
-                            <div id="operationsBoxBoardHeaders">
+                        <div class="" id="operationsBoxShow">
+                            <div class="grid grid-cols-5"  id="operationsBoxBoardHeaders">
                                 <div>
-                                    <p>Descipción</p>
+                                    <p class="text-lg">Descipción</p>
                                 </div>
                                 <div>
-                                    <p>Categoria</p>
+                                    <p class="text-lg">Categoria</p>
+                                </div>
+                                <div >
+                                    <p  class="text-lg text-right">Fecha</p>
                                 </div>
                                 <div>
-                                    <p>Fecha</p>
+                                    <p  class="text-lg text-right">Monto</p>
                                 </div>
                                 <div>
-                                    <p>Monto</p>
-                                </div>
-                                <div>
-                                    <p>Aciones</p>
+                                    <p  class="text-lg text-right">Aciones</p>
                                 </div>
                             </div>
                         </div>
