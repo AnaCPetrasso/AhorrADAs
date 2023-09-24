@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,30 +10,51 @@
     <title>AhorrADAs</title>
     <title>AhorrADAs</title>
 </head>
+
 <body class="box-border p-0">
-    <nav class="w-screen h-24 px-3.5 bg-emerald-400 flex " id="navBar"  aria-label="main navigation">
+    <nav class="w-screen h-24 px-3.5 bg-emerald-400 flex " id="navBar" aria-label="main navigation">
         <div class="w-2/4 h-full flex px-2.5 items-center">
-            <a class="navbarTitle text-6xl text-slate-50" id="navbarTitle"><i class="fa-solid fa-wallet text-5xl px-2 text-slate-50"></i>
+            <a class="navbarTitle text-6xl text-slate-50" id="navbarTitle"><i
+                    class="fa-solid fa-wallet text-5xl px-2 text-slate-50"></i>
                 Ahorradas
             </a>
         </div>
-        <div class="navbarMenu " id="navbarMenu" >
-            <div class="h-full flex px-2.5 items-center">
-                <a class="navbarItem text-slate-50 px-3.5 text-xl" id="navbarItemBalance"> <i class="fa-solid fa-chart-line px-2"></i>
-                    Balance
-                </a>
-                <a class="navbarItem text-slate-50 px-3.5 text-xl" id="navbarItemCategories"> <i class="fa-solid fa-tag px-2"></i>
-                    Categorias
-                </a>
-                <a class="navbarItem text-slate-50 px-3.5 text-xl " id="navbarItemReports"> <i class="fa-solid fa-chart-pie px-2"></i>
-                    Reportes
-                </a>
+        <div class="block lg:hidden">
+            <button id="menu-toggle" class="text-white hover:text-gray-300 focus:outline-none" aria-expanded="false">
+                <i class="fas fa-bars"></i> <!-- Icono de hamburguesa -->
+            </button>
+        </div>
+        <div class="hidden lg:flex">
+            <div class="navbarMenu " id="navbarMenu">
+                <div class="h-full flex px-2.5 items-center">
+                    <a class="navbarItem text-slate-50 px-3.5 text-xl" id="navbarItemBalance"> <i
+                            class="fa-solid fa-chart-line px-2"></i>
+                        Balance
+                    </a>
+                    <a class="navbarItem text-slate-50 px-3.5 text-xl" id="navbarItemCategories"> <i
+                            class="fa-solid fa-tag px-2"></i>
+                        Categorias
+                    </a>
+                    <a class="navbarItem text-slate-50 px-3.5 text-xl " id="navbarItemReports"> <i
+                            class="fa-solid fa-chart-pie px-2"></i>
+                        Reportes
+                    </a>
+                </div>
             </div>
         </div>
-    </nav>
+        <!-- burger menu -->
+        <div id="menu" class="hidden lg:hidden">
+            <ul>
+                <li><a href="#">Balance</a></li>
+                <li><a href="#">Categorias</a></li>
+                <li><a href="#">Reportes</a></li>
+            </ul>
+        </div>
+    </nav>    
     <main>
-        
+
     </main>
     <script src="js/script.js"></script>
 </body>
+
 </html>
