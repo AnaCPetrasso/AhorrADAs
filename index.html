@@ -69,7 +69,7 @@
                     <div class="border-solid border-2 border-gray-100 rounded-md bg-white " id="filterBox">
                         <div class="flex items-center justify-between" id="filterBoxTitle">
                             <div class="px-3.5 py-2.5">
-                                <h3 class="text-2xl" >Filtros</h3>
+                                <h3 class="text-2xl">Filtros</h3>
                             </div>
                             <div class="px-3.5 py-2.5">
                                 <a href="#" id="toggleFilters"></a>
@@ -79,17 +79,21 @@
                             <form action="#">
                                 <fieldset class="grid grid-cols-1 px-3.5 py-2.5">
                                     <label for="typeForm" class="text-lg py-0.5">Tipo</label>
-                                    <select name="type" id="typeForm" class="py-2.5 px-2.5 bg-white rounded-md border-2 border-gray-200 border-solid" >
+                                    <select name="type" id="typeForm"
+                                        class="py-2.5 px-2.5 bg-white rounded-md border-2 border-gray-200 border-solid">
                                         <option value="test">test</option>
                                     </select>
                                     <label for="categoryForm" class="text-lg py-0.5">Categoria</label>
-                                    <select name="category" id="categoryForm" class="py-2.5 px-2.5 bg-white rounded-md border-2 border-gray-200 border-solid">
+                                    <select name="category" id="categoryForm"
+                                        class="py-2.5 px-2.5 bg-white rounded-md border-2 border-gray-200 border-solid">
                                         <option value="test">test</option>
                                     </select>
                                     <label for="dateForm" class="text-lg py-0.5">Desde</label>
-                                    <input type="date" name="dateForm" class="py-2.5 px-2.5 bg-white rounded-md border-2 border-gray-200 border-solid">
+                                    <input type="date" name="dateForm"
+                                        class="py-2.5 px-2.5 bg-white rounded-md border-2 border-gray-200 border-solid">
                                     <label for="sortByForm" class="text-lg py-0.5">Ordernar por</label>
-                                    <select name="sortBy" id="sortByForm" class="py-2.5 px-2.5 bg-white rounded-md border-2 border-gray-200 border-solid">
+                                    <select name="sortBy" id="sortByForm"
+                                        class="py-2.5 px-2.5 bg-white rounded-md border-2 border-gray-200 border-solid">
                                         <option value="test">Mas Reciente</option>
                                         <option value="test">Menos Reciente</option>
                                         <option value="test">Mayor Monto</option>
@@ -103,35 +107,38 @@
                     </div>
                 </div>
                 <!-- ---------------------- OPERATIONS BOX ---------------- -->
-                <div class="border-solid border-2 border-gray-100 rounded-md bg-white col-span-8 px-3.5 py-2.5" id="operationsBox">
+                <div class="border-solid border-2 border-gray-100 rounded-md bg-white col-span-8 px-3.5 py-2.5"
+                    id="operationsBox">
                     <div class="flex justify-between px-3.5 py-2.5" id="operationsBoxTitle">
                         <h3 class="text-2xl">Operaciones</h3>
-                        <button class="btn bg-emerald-400 border-solid border-2 border-emerald-400 rounded-md text-slate-50 px-1.5 py-1.5 " id="newOperationbtn">+ Nueva Operación</button>
+                        <button
+                            class="btn bg-emerald-400 border-solid border-2 border-emerald-400 rounded-md text-slate-50 px-1.5 py-1.5 "
+                            id="newOperationbtn">+ Nueva Operación</button>
                     </div>
                     <div class="flex flex-col px-3.5 py-2.5" id="operationsBoxDisplay">
                         <div class="flex flex-col justify-center items-center hidden" id="operationsBoxNone">
-                            <figure class="w-7/12 " >
+                            <figure class="w-7/12 ">
                                 <img class="" src="img/wallet.svg" alt="wallet">
                             </figure>
                             <h4 class="text-2xl py-2.5">Sin Resultados</h4>
                             <p class="py-2.5">Cambia los filtros o agrega operaciones</p>
                         </div>
                         <div class="" id="operationsBoxShow">
-                            <div class="grid grid-cols-5"  id="operationsBoxBoardHeaders">
+                            <div class="grid grid-cols-5" id="operationsBoxBoardHeaders">
                                 <div>
                                     <p class="text-lg">Descipción</p>
                                 </div>
                                 <div>
                                     <p class="text-lg">Categoria</p>
                                 </div>
-                                <div >
-                                    <p  class="text-lg text-right">Fecha</p>
+                                <div>
+                                    <p class="text-lg text-right">Fecha</p>
                                 </div>
                                 <div>
-                                    <p  class="text-lg text-right">Monto</p>
+                                    <p class="text-lg text-right">Monto</p>
                                 </div>
                                 <div>
-                                    <p  class="text-lg text-right">Aciones</p>
+                                    <p class="text-lg text-right">Aciones</p>
                                 </div>
                             </div>
                         </div>
@@ -140,7 +147,7 @@
             </div>
         </section>
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CATEGORIES SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-        <section class="w-2/4 h-screen mt-52" id="categories">
+        <section class="w-2/4 h-screen mt-52 hidden" id="categories">
             <div class="border-solid border-2 border-gray-100 rounded-md bg-white py-3.5">
                 <div class="sm:w-full w-12/12 px-4">
                     <h1 class="text-4xl font-bold py-4">Categorías</h1>
@@ -166,6 +173,25 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ EDIT CATEGORIES SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <section class="w-2/4 h-screen mt-52 " id="editCategories">
+            <div class="border-solid border-2 border-gray-100 rounded-md bg-white py-3.5">
+                <div class="sm:w-full w-12/12 px-4">
+                    <h1 class="text-4xl font-bold py-4">Editar categorías</h1>
+                    <div class="flex content-center flex-col w-12/12">
+                        <form action="" class="mt-8">
+                            <label for="" class="font-bold">Nombre</label>
+                            <div class="pt-2 flex-col">
+                                <input type="text" class="border rounded border-black border-slate-200 w-full py-2">
+                                <div class="py-3.5 mt-8 flex justify-end">
+                                    <button class="bg-green-500 rounded text-white px-5 py-2 ml-4">Cancelar</button>
+                                    <button class="bg-green-500 rounded text-white px-5 py-2 ml-4">Agregar</button>
+                                </div>
+
+                            </div>
+                        </form>
+
         </section>
     </main>
     <script src="js/script.js"></script>
