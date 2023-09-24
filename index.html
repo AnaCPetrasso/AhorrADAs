@@ -150,7 +150,7 @@
         <section class="w-2/4 h-screen mt-52 hidden" id="categories">
             <div class="border-solid border-2 border-gray-100 rounded-md bg-white py-3.5">
                 <div class="sm:w-full w-12/12 px-4">
-                    <h1 class="text-4xl font-bold py-4">Categorías</h1>
+                    <h2 class="text-4xl font-bold py-4">Categorías</h2>
                     <div class="flex content-center flex-col w-12/12">
                         <form action="" class="mt-8">
                             <label for="" class="font-bold">Nombre</label>
@@ -175,10 +175,10 @@
             </div>
         </section>
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ EDIT CATEGORIES SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-        <section class="w-2/4 h-screen mt-52 " id="editCategories">
+        <section class="w-2/4 h-screen mt-52 hidden" id="editCategories">
             <div class="border-solid border-2 border-gray-100 rounded-md bg-white py-3.5">
                 <div class="sm:w-full w-12/12 px-4">
-                    <h1 class="text-4xl font-bold py-4">Editar categorías</h1>
+                    <h2 class="text-4xl font-bold py-4">Editar categorías</h2>
                     <div class="flex content-center flex-col w-12/12">
                         <form action="" class="mt-8">
                             <label for="" class="font-bold">Nombre</label>
@@ -193,8 +193,102 @@
                         </form>
                     </div>
                 </div>
-            </div>           
+            </div>
         </section>
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ REPORTS SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <section class="w-2/4 h-screen mt-52" id="reports">
+            <div class="border-solid border-2 border-gray-100 rounded-md bg-white px-3.5 py-2.5">
+                <h2 class="text-4xl font-bold py-4">Reportes</h2>
+
+                <div class="mt-7 flex flex-col items-center hidden" id="reportsNone">
+                    <img src="./img/chart.svg" alt="" class="mt-3 w-6/12">
+                    <h4 class="py-4 text-2xl font-medium text-slate-700">Operaciones insuficientes</h4>
+                    <p class="mb-6">Prueba agregando más operaciones</p>
+                </div>
+                <div id="reportsDisplay">
+                    <!-- Resumen -->
+                    <div class="px-3.5 py-2.5">
+                        <h4 class="text-xl font-bold py-4">Resumen</h4>
+                        <div class="flex w-full justify-between py-2.5">
+                            <p>Categoria con mayor ganancia </p>
+                            <div class="flex w-2/5 justify-between">
+                                <p id="bigProfitCategory"></p>
+                                <p id="bigProfitTotal"></p>
+                            </div>
+                        </div>
+                        <div class="flex w-full justify-between py-2.5">
+                            <p>Categoria con mayor gasto </p>
+                            <div class="flex w-2/5 justify-between">
+                                <p id="bigSpentCategory"></p>
+                                <p id="bigSpentTotal"></p>
+                            </div>
+
+                        </div>
+                        <div class="flex w-full justify-between py-2.5">
+                            <p>Categoria con mayor balance </p>
+                            <div class="flex w-2/5 justify-between">
+                                <p id="bigBalanceCategory"></p>
+                                <p id="bigBalanceTotal"></p>
+                            </div>
+                        </div>
+                        <div class="flex w-full justify-between py-2.5">
+                            <p>Mes con mayor ganacia </p>
+                            <div class="flex w-2/5 justify-between">
+                                <p id="bigProfitMonth"></p>
+                                <p id="bigProfitMonthTotal"></p>
+                            </div>
+
+                        </div>
+                        <div class="flex w-full justify-between py-2.5">
+                            <p>Mes con mayor gasto </p>
+                            <div class="flex w-2/5 justify-between">
+                                <p id="bigSpentMonth"></p>
+                                <p id="bigSpentMonthTotal"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Totals by categories-->
+                    <div class="px-3.5 py-2.5">
+                        <h4 class="text-xl font-bold py-4">Totales por categorias</h4>
+                        <div class="grid grid-cols-4 flex w-full justify-between py-2.5">
+                            <!-- Below each p the data should appear, adding it with js -->
+                            <div>
+                                <p class="">Categoria</p>
+                            </div>
+                            <div>
+                                <p class="text-right">Ganancia</p>
+                            </div>
+                            <div>
+                                <p class="text-right">Gastos</p>
+                            </div>
+                            <div>
+                                <p class="text-right">Balance</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Totals by month-->
+                    <div class="px-3.5 py-2.5">
+                        <h4 class="text-xl font-bold py-4">Totales por mes</h4>
+                        <div class="grid grid-cols-4 flex w-full justify-between py-2.5">
+                            <!-- Below each p the data should appear, adding it with js -->
+                            <div>
+                                <p class="">Mes</p>
+                            </div>
+                            <div>
+                                <p class="text-right">Ganancia</p>
+                            </div>
+                            <div>
+                                <p class="text-right">Gastos</p>
+                            </div>
+                            <div>
+                                <p class="text-right">Balance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
     <script src="js/script.js"></script>
 </body>
