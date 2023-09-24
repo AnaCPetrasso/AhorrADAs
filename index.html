@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,138 +8,48 @@
     <script src="https://kit.fontawesome.com/8f1dad4900.js" crossorigin="anonymous"></script>
     <title>AhorrADAs</title>
 </head>
-
 <body class="box-border p-0">
-    <nav class="w-screen h-24 fixed px-3.5 bg-emerald-400 flex " id="navBar" aria-label="main navigation">
+    <nav class="w-screen h-24 px-3.5 bg-emerald-400 flex " id="navBar" aria-label="main navigation">
         <div class="w-2/4 h-full flex px-2.5 items-center">
             <a class="navbarTitle text-6xl text-slate-50" id="navbarTitle"><i
                     class="fa-solid fa-wallet text-5xl px-2 text-slate-50"></i>
                 Ahorradas
             </a>
         </div>
-        <div class="navbarMenu " id="navbarMenu">
-            <div class="h-full flex px-2.5 items-center">
-                <a class="navbarItem text-slate-50 px-3.5 text-xl" id="navbarItemBalance"> <i
-                        class="fa-solid fa-chart-line px-2"></i>
-                    Balance
-                </a>
-                <a class="navbarItem text-slate-50 px-3.5 text-xl" id="navbarItemCategories"> <i
-                        class="fa-solid fa-tag px-2"></i>
-                    Categorias
-                </a>
-                <a class="navbarItem text-slate-50 px-3.5 text-xl " id="navbarItemReports"> <i
-                        class="fa-solid fa-chart-pie px-2"></i>
-                    Reportes
-                </a>
+        <div class="block lg:hidden">
+            <button id="menu-toggle" class="text-white hover:text-gray-300 focus:outline-none" aria-expanded="false">
+                <i class="fas fa-bars"></i> <!-- Icono de hamburguesa -->
+            </button>
+        </div>
+        <div class="hidden lg:flex">
+            <div class="navbarMenu " id="navbarMenu">
+                <div class="h-full flex px-2.5 items-center">
+                    <a class="navbarItem text-slate-50 px-3.5 text-xl" id="navbarItemBalance"> <i
+                            class="fa-solid fa-chart-line px-2"></i>
+                        Balance
+                    </a>
+                    <a class="navbarItem text-slate-50 px-3.5 text-xl" id="navbarItemCategories"> <i
+                            class="fa-solid fa-tag px-2"></i>
+                        Categorias
+                    </a>
+                    <a class="navbarItem text-slate-50 px-3.5 text-xl " id="navbarItemReports"> <i
+                            class="fa-solid fa-chart-pie px-2"></i>
+                        Reportes
+                    </a>
+                </div>
             </div>
         </div>
-    </nav>
-    <main class="bg-slate-100 flex justify-center items-center">
-        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BALANCE SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-        <section class="w-2/4 h-screen mt-52">
-            <div class="grid grid-cols-12 gap-x-3.5 flex justify-around justify-items-stretch " id="mainBox">
-                <!-- ------------------------ BALANCE & FILTER BOX ---------- -->
-                <div class="col-span-4 "><!--this div is for create a box than contain balanceBox & filterBox  -->
-                    <!-- ---------------------- BALANCE BOX ---------------- -->
-                    <div class="border-solid border-2 border-gray-100 rounded-md bg-white " id="balanceBox">
-                        <h2 class="text-2xl px-3.5 py-2.5">Balance</h2>
-                        <div class="grid grid-cols-2 px-3.5 py-2.5 " id="balanceBoxBoard">
-                            <div class="my-0.5">
-                                <p class="text-lg">Ganancias</p>
-                            </div>
-                            <div class="flex justify-end">
-                                <p class="text-green-600 font-semibold ">+0</p>
-                            </div>
-                            <div class="my-0.5">
-                                <p class="text-lg">Gastos</p>
-                            </div>
-                            <div class="flex justify-end">
-                                <p class="text-red-600 font-semibold ">-0</p>
-                            </div>
-                            <div class="my-0.5">
-                                <p class="text-xl">Total</p>
-                            </div>
-                            <div class="flex justify-end">
-                                <p class=" font-semibold ">$0</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ---------------------- FILTER BOX ---------------- -->
-                    <div class="border-solid border-2 border-gray-100 rounded-md bg-white " id="filterBox">
-                        <div class="flex items-center justify-between" id="filterBoxTitle">
-                            <div class="px-3.5 py-2.5">
-                                <h3 class="text-2xl" >Filtros</h3>
-                            </div>
-                            <div class="px-3.5 py-2.5">
-                                <a href="#" id="toggleFilters"></a>
-                            </div>
-                        </div>
-                        <div class="filterBoxFilters" id="filters">
-                            <form action="#">
-                                <fieldset class="grid grid-cols-1 px-3.5 py-2.5">
-                                    <label for="typeForm" class="text-lg py-0.5">Tipo</label>
-                                    <select name="type" id="typeForm" class="py-2.5 px-2.5 bg-white rounded-md border-2 border-gray-200 border-solid" >
-                                        <option value="test">test</option>
-                                    </select>
-                                    <label for="categoryForm" class="text-lg py-0.5">Categoria</label>
-                                    <select name="category" id="categoryForm" class="py-2.5 px-2.5 bg-white rounded-md border-2 border-gray-200 border-solid">
-                                        <option value="test">test</option>
-                                    </select>
-                                    <label for="dateForm" class="text-lg py-0.5">Desde</label>
-                                    <input type="date" name="dateForm" class="py-2.5 px-2.5 bg-white rounded-md border-2 border-gray-200 border-solid">
-                                    <label for="sortByForm" class="text-lg py-0.5">Ordernar por</label>
-                                    <select name="sortBy" id="sortByForm" class="py-2.5 px-2.5 bg-white rounded-md border-2 border-gray-200 border-solid">
-                                        <option value="test">Mas Reciente</option>
-                                        <option value="test">Menos Reciente</option>
-                                        <option value="test">Mayor Monto</option>
-                                        <option value="test">Menor Monto</option>
-                                        <option value="test">A/Z</option>
-                                        <option value="test">Z/A</option>
-                                    </select>
-                                </fieldset>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <!-- ---------------------- OPERATIONS BOX ---------------- -->
-                <div class="border-solid border-2 border-gray-100 rounded-md bg-white col-span-8 px-3.5 py-2.5" id="operationsBox">
-                    <div class="flex justify-between px-3.5 py-2.5" id="operationsBoxTitle">
-                        <h3 class="text-2xl">Operaciones</h3>
-                        <button class="btn bg-emerald-400 border-solid border-2 border-emerald-400 rounded-md text-slate-50 px-1.5 py-1.5 " id="newOperationbtn">+ Nueva Operación</button>
-                    </div>
-                    <div class="flex flex-col px-3.5 py-2.5" id="operationsBoxDisplay">
-                        <div class="flex flex-col justify-center items-center hidden" id="operationsBoxNone">
-                            <figure class="w-7/12 " >
-                                <img class="" src="img/wallet.svg" alt="wallet">
-                            </figure>
-                            <h4 class="text-2xl py-2.5">Sin Resultados</h4>
-                            <p class="py-2.5">Cambia los filtros o agrega operaciones</p>
-                        </div>
-                        <div class="" id="operationsBoxShow">
-                            <div class="grid grid-cols-5"  id="operationsBoxBoardHeaders">
-                                <div>
-                                    <p class="text-lg">Descipción</p>
-                                </div>
-                                <div>
-                                    <p class="text-lg">Categoria</p>
-                                </div>
-                                <div >
-                                    <p  class="text-lg text-right">Fecha</p>
-                                </div>
-                                <div>
-                                    <p  class="text-lg text-right">Monto</p>
-                                </div>
-                                <div>
-                                    <p  class="text-lg text-right">Aciones</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- burger menu -->
+        <div id="menu" class="hidden lg:hidden">
+            <ul>
+                <li><a href="#">Balance</a></li>
+                <li><a href="#">Categorias</a></li>
+                <li><a href="#">Reportes</a></li>
+            </ul>
+        </div>
+    </nav>    
+    <main>
     </main>
     <script src="js/script.js"></script>
 </body>
-
 </html>
